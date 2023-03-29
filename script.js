@@ -40,7 +40,7 @@ function openSocket(url) {
 function changeConnection(event) {
   // open the connection if it's closed, or close it if open:
   if (socket.readyState === WebSocket.CLOSED) {
-    openSocket(serverURL);
+    openSocket("ws://localhost:8080");
   } else {
     socket.close();
   }
